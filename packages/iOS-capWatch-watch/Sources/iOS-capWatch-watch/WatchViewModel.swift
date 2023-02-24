@@ -34,7 +34,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         // apple docs say this won't work on simulator
         
         if WatchViewModel.shared.watchUI.isEmpty {
-            let _ = session.transferUserInfo(REQUESTUI_KEY)
+            let _ = session.transferUserInfo(REQUESTUI)
         }
     }
     

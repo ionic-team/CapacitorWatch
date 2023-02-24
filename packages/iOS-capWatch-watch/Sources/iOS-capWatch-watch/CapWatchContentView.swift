@@ -14,7 +14,7 @@ struct CapWatchContentView: View {
         VStack {
             if model.watchUI == "" {
                 Button(action: {
-                    WatchViewModel.shared.session.sendMessage(REQUESTUI_KEY, replyHandler: nil) { error in
+                    WatchViewModel.shared.session.sendMessage(REQUESTUI, replyHandler: nil) { error in
                         print("UI Delivery failed")
                     }
                 }) {
