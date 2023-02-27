@@ -1,0 +1,8 @@
+scripts/
+rollup.config.js
+tsconfig.json
+.prettierignore
+.prettierrc.js
+.eslintignore
+src/
+cli-scripts/

@@ -1,0 +1,77 @@
+{
+  "name": "@ionic-enterprise/capWatch",
+  "version": "1.0.0-alpha.0",
+  "description": "Provide Watch interfaces and communication",
+  "main": "dist/plugin.cjs.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "unpkg": "dist/plugin.js",
+  "files": [
+    "android/src/main/",
+    "android/build.gradle",
+    "dist/",
+    "ios/Plugin/",
+    "IonicEnterpriseSslPinning.podspec"
+  ],
+  "author": "Ionic Team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/enterprise-watch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/enterprise-watch/issues"
+  },
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "scripts": {
+    "verify": "pnpm run verify:ios && pnpm run verify:android && pnpm run verify:web",
+    "verify:ios": "cd ios && pod install && xcodebuild -workspace Plugin.xcworkspace -scheme Plugin -destination generic/platform=iOS && cd ..",
+    "verify:android": "cd android && ./gradlew clean build test && cd ..",
+    "verify:web": "pnpm run build",
+    "lint": "pnpm run eslint . --ext ts && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --check && pnpm run swiftlint -- lint",
+    "fmt": "pnpm run eslint . --ext ts --fix && pnpm run prettier \"**/*.{css,html,ts,js,java}\" --write && pnpm run swiftlint -- --fix --format",
+    "eslint": "eslint",
+    "prettier": "prettier",
+    "swiftlint": "node-swiftlint",
+    "docgen": "docgen --api SSLPinningPlugin --output-readme README.md --output-json dist/docs.json",
+    "build": "pnpm run clean && pnpm run docgen && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^4.0.0",
+    "@capacitor/cli": "^4.0.0",
+    "@capacitor/core": "^4.0.0",
+    "@capacitor/docgen": "^0.0.18",
+    "@capacitor/ios": "^4.0.0",
+    "@ionic/eslint-config": "^0.3.0",
+    "@ionic/prettier-config": "^1.0.1",
+    "@ionic/swiftlint-config": "^1.1.2",
+    "eslint": "^7.11.0",
+    "prettier": "~2.3.0",
+    "prettier-plugin-java": "~1.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.78.1",
+    "swiftlint": "^1.0.1",
+    "typescript": "~4.7.4"
+  },
+  "peerDependencies": {
+    "@capacitor/core": ">=4.6.0 && <5.0.0"
+  },
+  "swiftlint": "@ionic/swiftlint-config",
+  "eslintConfig": {
+    "extends": "@ionic/eslint-config/recommended"
+  },
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  }
+}
