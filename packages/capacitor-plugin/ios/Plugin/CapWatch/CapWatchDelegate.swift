@@ -70,7 +70,9 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     }
     
     func commandToJS(_ command: String) {
-        // send this to JS
+        NotificationCenter.default.post(name: Notification.Name(COMMAND_KEY),
+                                        object: nil,
+                                        userInfo: [COMMAND_KEY: command])
     }
     
     #endif
