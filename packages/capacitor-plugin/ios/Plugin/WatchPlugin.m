@@ -3,4 +3,7 @@
 
 // Define the plugin using the CAP_PLUGIN Macro, and
 // each method the plugin supports using the CAP_PLUGIN_METHOD macro.
-CAP_PLUGIN(SSLPinningPlugin, "SSLPinning",)
+CAP_PLUGIN(WatchPlugin, "Watch",
+   CAP_PLUGIN_METHOD(updateWatchUI, CAPPluginReturnPromise);
+   CAP_PLUGIN_METHOD(updateWatchData, CAPPluginReturnPromise);
+);

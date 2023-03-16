@@ -2,21 +2,21 @@
 import PackageDescription
 
 let package = Package(
-    name: "iOS-capWatch-sdk",
+    name: "CapWatch",
     platforms: [.iOS(.v16), .watchOS(.v9)],
     products: [
         .library(
-            name: "iOS-capWatch-sdk",
-            targets: ["iOS-capWatch-sdk"]),
+            name: "CapWatch",
+            targets: ["CapWatch"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "iOS-capWatch-sdk",
+            name: "CapWatch",
             dependencies: []),
         .testTarget(
             name: "iOS-capWatch-sdkTests",
-            dependencies: ["iOS-capWatch-sdk"]),
+            dependencies: ["CapWatch"]),
     ]
 )

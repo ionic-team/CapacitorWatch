@@ -1,30 +1,34 @@
 //
-//  WatchSessionDelegate.swift
-//  
+//  CapWatchDelegate.swift
+//  Plugin
 //
-//  Created by Dan Giralté on 2/24/23.
+//  Created by Dan Giralté on 3/16/23.
+//  Copyright © 2023 Max Lynch. All rights reserved.
 //
 
 import WatchConnectivity
 
-
-class WatchSessionDelegate : NSObject, WCSessionDelegate {
+public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     var WATCH_UI = ""
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    static var shared = CapWatchSessionDelegate()
+    
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
     
     #if os(iOS)
-    func sessionDidBecomeInactive(_ session: WCSession) {
+    
+    public func sessionDidBecomeInactive(_ session: WCSession) {
+        
     }
     
-    func sessionDidDeactivate(_ session: WCSession) {
+    public func sessionDidDeactivate(_ session: WCSession) {
         // dcg - do we want this?
         session.activate()
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         let command = message[REQUESTUI_KEY] as? String ?? ""
         
         if command == REQUESTUI_VALUE {
