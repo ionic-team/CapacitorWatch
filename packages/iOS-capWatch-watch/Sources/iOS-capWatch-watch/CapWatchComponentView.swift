@@ -17,7 +17,6 @@ struct CapWatchComponentView : View, Identifiable {
     
     var viewModel: [String: String]?
     
-    
     init(_ control: String, _ vm: [String: String]? = nil) {
         viewModel = vm
         
