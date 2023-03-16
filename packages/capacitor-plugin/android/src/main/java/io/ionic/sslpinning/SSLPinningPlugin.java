@@ -1,4 +1,4 @@
-package io.ionic.sslpinning;
+package io.ionic.watch;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -6,10 +6,10 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "SSLPinning")
-public class SSLPinningPlugin extends Plugin {
+@CapacitorPlugin(name = "Watch")
+public class WatchPlugin extends Plugin {
 
-    private SSLPinning implementation = new SSLPinning();
+    private Watch implementation = new Watch();
 
     @PluginMethod
     public void echo(PluginCall call) {

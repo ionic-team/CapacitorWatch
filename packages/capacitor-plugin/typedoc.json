@@ -3,7 +3,7 @@
   "disableSources": true,
   "out": "api",
   "theme": "markdown",
-  "name": "SSL Pinning",
+  "name": "capWatch",
   "hideBreadcrumbs": true,
   "hideGenerator": true,
   "plugin": ["typedoc-plugin-markdown"]

@@ -1,8 +1,8 @@
-package io.ionic.sslpinning;
+package io.ionic.watch;
 
 import android.util.Log;
 
-public class SSLPinning {
+public class Watch {
 
     public String echo(String value) {
         Log.i("Echo", value);

@@ -1,11 +1,11 @@
-# @ionic-enterprise/ssl-pinning
+# @ionic-enterprise/capWatch
 
-Provide SSL pinning for Capacitor Native HTTP Plugin
+Provide Watch connectivity for Capacitor
 
 ## Install
 
 ```bash
-npm install @ionic-enterprise/ssl-pinning
+npm install @ionic-enterprise/capWatch
 npx cap sync
 ```
 
