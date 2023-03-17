@@ -6,9 +6,5 @@ const CapWatchImpl = registerPlugin<CapWatchPlugin>('CapWatchPlugin', {
   web: () => import('./web').then(m => new m.CapWatchWeb()),
 });
 
-export class CapWatch {
-  
-}
-
 export * from './definitions';
 export { CapWatchImpl };
