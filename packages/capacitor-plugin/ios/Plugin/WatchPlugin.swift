@@ -40,10 +40,9 @@ public class WatchPlugin: CAPPlugin {
     }
     
     @objc func handleCommandFromWatch(_ notification: NSNotification) {
-        
         if let command = notification.userInfo![COMMAND_KEY] as? String {
             print("process: \(command)")
-            //commandToJS(command)
+            notifyListeners("runCommand", data: ["command": command])
         }
     }
     
@@ -64,7 +63,6 @@ public class WatchPlugin: CAPPlugin {
         }
         
         CapWatchSessionDelegate.shared.updateViewData(newData)
-        
         call.resolve()
     }
     
