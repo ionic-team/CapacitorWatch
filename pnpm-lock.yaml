@@ -58,6 +58,7 @@ importers:
       '@capacitor/cli': 4.7.1
       '@capacitor/core': 4.7.1
       '@capacitor/haptics': 4.1.0
+      '@capacitor/ios': ^4.0.0
       '@capacitor/keyboard': 4.1.1
       '@capacitor/status-bar': 4.1.1
       '@ionic-enterprise/capWatch': 'workspace: *'
@@ -91,6 +92,7 @@ importers:
       '@capacitor/app': 4.1.1_@capacitor+core@4.7.1
       '@capacitor/core': 4.7.1
       '@capacitor/haptics': 4.1.0_@capacitor+core@4.7.1
+      '@capacitor/ios': 4.7.1_@capacitor+core@4.7.1
       '@capacitor/keyboard': 4.1.1_@capacitor+core@4.7.1
       '@capacitor/status-bar': 4.1.1_@capacitor+core@4.7.1
       '@ionic-enterprise/capWatch': link:../capacitor-plugin
@@ -1449,7 +1451,6 @@ packages:
       '@capacitor/core': ^4.7.0
     dependencies:
       '@capacitor/core': 4.7.1
-    dev: true
 
   /@capacitor/keyboard/4.1.1_@capacitor+core@4.7.1:
     resolution: {integrity: sha512-fdC7u2TeG4BqwC0LnPnhOdya31C4QKdhk/8pc5lxI9X5jyYAetMCN1kEkKa7KREw4DdzXotJt27B9BXxAza6og==}

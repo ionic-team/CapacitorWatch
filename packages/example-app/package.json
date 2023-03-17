@@ -10,12 +10,13 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@ionic-enterprise/capWatch": "workspace: *",
     "@capacitor/app": "4.1.1",
     "@capacitor/core": "4.7.1",
     "@capacitor/haptics": "4.1.0",
+    "@capacitor/ios": "^4.0.0",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
+    "@ionic-enterprise/capWatch": "workspace: *",
     "@ionic/vue": "^6.0.0",
     "@ionic/vue-router": "^6.0.0",
     "core-js": "^3.6.5",
@@ -24,6 +25,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
+    "@babel/core": "~7.21.3",
     "@capacitor/cli": "4.7.1",
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
@@ -44,8 +46,7 @@
     "eslint-plugin-vue": "^9.8.0",
     "jest": "^27.3.1",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.3.5",
-    "@babel/core": "~7.21.3"
+    "typescript": "^4.3.5"
   },
   "description": "An Ionic project"
 }
