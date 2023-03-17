@@ -67,13 +67,5 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    // required protocol stubs?
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
 }
 
