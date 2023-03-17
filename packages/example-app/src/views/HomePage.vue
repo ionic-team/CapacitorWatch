@@ -24,8 +24,16 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 import { CapWatch } from '@ionic-enterprise/capWatch';
 
+const watchUI = 
+`Text("Capacitor WATCH")
+Text("Counter: $counter")
+Button("+=1", "js(counter++)")`;
+
+// in theory this will happen at some time well after the watch session has begun
+CapWatch.updateWatchUI(watchUI);
+
 async function testFoo() {
-  await CapWatch.updateWatchUI("foo")
+  await CapWatch.updateWatchUI(watchUI);
 }
 </script>
 

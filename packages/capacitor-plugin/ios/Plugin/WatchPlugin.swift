@@ -46,6 +46,16 @@ public class WatchPlugin: CAPPlugin {
         }
     }
     
+    @objc func setWatchUI(_ call: CAPPluginCall) {
+        guard let newUI = call.getString("UI_KEY")  else {
+            return
+        }
+        
+        CapWatchSessionDelegate.shared.WATCH_UI = newUI
+        
+        call.resolve()
+    }
+    
     @objc func updateWatchUI(_ call: CAPPluginCall) {
         guard let newUI = call.getString("UI_KEY")  else {
             return

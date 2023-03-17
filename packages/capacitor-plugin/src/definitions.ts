@@ -12,6 +12,7 @@ export interface CapWatchPlugin {
         listenerFunc: (command: String) => void,
       ): Promise<PluginListenerHandle> & PluginListenerHandle;
 
+    setWatchUI(ui: string): Promise<void>;
 
     updateWatchUI(newUI: string): Promise<void>;
 

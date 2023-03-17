@@ -1,6 +1,6 @@
 //
 //  CapWatchView.swift
-//  
+//
 //
 //  Created by Dan Giralté on 2/24/23.
 //

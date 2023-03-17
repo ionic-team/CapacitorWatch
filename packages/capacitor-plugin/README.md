@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`addListener('runCommand', ...)`](#addlistenerruncommand)
+* [`setWatchUI(...)`](#setwatchui)
 * [`updateWatchUI(...)`](#updatewatchui)
 * [`updateWatchData(...)`](#updatewatchdata)
 * [Interfaces](#interfaces)
@@ -35,6 +36,19 @@ addListener(eventName: "runCommand", listenerFunc: (command: String) => void) =>
 | **`listenerFunc`** | <code>(command: <a href="#string">String</a>) =&gt; void</code> |
 
 **Returns:** <code>Promise&lt;<a href="#pluginlistenerhandle">PluginListenerHandle</a>&gt; & <a href="#pluginlistenerhandle">PluginListenerHandle</a></code>
+
+--------------------
+
+
+### setWatchUI(...)
+
+```typescript
+setWatchUI(ui: string) => Promise<void>
+```
+
+| Param    | Type                |
+| -------- | ------------------- |
+| **`ui`** | <code>string</code> |
 
 --------------------
 
