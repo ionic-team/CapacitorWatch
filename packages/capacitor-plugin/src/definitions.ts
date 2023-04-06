@@ -16,5 +16,5 @@ export interface WatchPlugin {
 
     updateWatchUI(options: {watchUI: string}): Promise<void>;
 
-    updateWatchData(options: {data: string}): Promise<void>;
+    updateWatchData(options: {data: {[key: string]: string}}): Promise<void>;
 }

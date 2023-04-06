@@ -69,12 +69,12 @@ updateWatchUI(options: { watchUI: string; }) => Promise<void>
 ### updateWatchData(...)
 
 ```typescript
-updateWatchData(options: { data: string; }) => Promise<void>
+updateWatchData(options: { data: { [key: string]: string; }; }) => Promise<void>
 ```
 
-| Param         | Type                           |
-| ------------- | ------------------------------ |
-| **`options`** | <code>{ data: string; }</code> |
+| Param         | Type                                               |
+| ------------- | -------------------------------------------------- |
+| **`options`** | <code>{ data: { [key: string]: string; }; }</code> |
 
 --------------------
 

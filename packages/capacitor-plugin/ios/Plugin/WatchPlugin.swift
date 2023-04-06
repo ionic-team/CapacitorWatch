@@ -59,8 +59,6 @@ public class WatchPlugin: CAPPlugin {
     @objc func updateWatchUI(_ call: CAPPluginCall) {
         let newUI = call.getString("watchUI")
         
-        print("newUI: \(newUI)")
-        
         CapWatchSessionDelegate.shared.WATCH_UI = newUI!
         CapWatchSessionDelegate.shared.sendUI()
         
@@ -68,7 +66,7 @@ public class WatchPlugin: CAPPlugin {
     }
     
     @objc func updateWatchData(_ call: CAPPluginCall) {
-        guard let newData = call.getAny("data") as? [String: String] else {
+        guard let newData = call.getObject("data") as? [String: String] else {
             return
         }
         

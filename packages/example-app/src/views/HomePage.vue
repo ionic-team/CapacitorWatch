@@ -14,7 +14,9 @@
       </ion-header>
 
       <div id="container">
-      <ion-button @click="testFoo()">Do the thing</ion-button>
+      <ion-button @click="sendUI()">Send WatchUI</ion-button>
+      <ion-button @click="sendData()">Send Data</ion-button>
+      
       </div>
     </ion-content>
   </ion-page>
@@ -29,12 +31,23 @@ const watchUI =
 Text("Counter: $counter")
 Button("+=1", "js(counter++)")`;
 
+// eslint-disable-next-line
+var stateData = {
+  counter: "1",
+  var2: "2"
+};
+
 // in theory this will happen at some time well after the watch session has begun
 // CapWatch.updateWatchUI(watchUI);
 
-async function testFoo() {
+async function sendUI() {
   console.log("trying to update watchui");
   await Watch.updateWatchUI({"watchUI": watchUI});
+}
+
+async function sendData() {
+  console.log("trying to update watch data");
+  await Watch.updateWatchData({"data": stateData})
 }
 </script>
 
