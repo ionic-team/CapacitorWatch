@@ -2,7 +2,7 @@ import { registerPlugin } from '@capacitor/core';
 
 import type { WatchPlugin } from './definitions';
 
-const Watch = registerPlugin<WatchPlugin>('WatchPlugin', {
+const Watch = registerPlugin<WatchPlugin>('Watch', {
   web: () => import('./web').then(m => new m.WatchWeb()),
 });
 

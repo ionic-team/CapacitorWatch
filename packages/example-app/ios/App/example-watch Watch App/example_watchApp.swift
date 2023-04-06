@@ -12,7 +12,7 @@ import WatchConnectivity
 struct example_watch_Watch_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            CapWatchView()
+            CapWatchContentView()
                 .onAppear {
                     assert(WCSession.isSupported(), "This sample requires Watch Connectivity support!")
                     WCSession.default.delegate = WatchViewModel.shared
@@ -21,3 +21,4 @@ struct example_watch_Watch_AppApp: App {
         }
     }
 }
+ 

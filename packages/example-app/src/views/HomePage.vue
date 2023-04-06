@@ -34,15 +34,7 @@ Button("+=1", "js(counter++)")`;
 
 async function testFoo() {
   console.log("trying to update watchui");
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  console.log(JSON.stringify(Object.keys(window.Capacitor.Plugins.Watch)));
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  console.log(JSON.stringify(Object.keys(window.Capacitor.Plugins.WatchPlugin)));
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
-  await window.Capacitor.Plugins.Watch.updateWatchUI(watchUI);
+  await Watch.updateWatchUI({"watchUI": watchUI});
 }
 </script>
 

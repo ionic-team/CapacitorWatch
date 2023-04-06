@@ -43,12 +43,12 @@ addListener(eventName: "runCommand", listenerFunc: (command: String) => void) =>
 ### setWatchUI(...)
 
 ```typescript
-setWatchUI(ui: string) => Promise<void>
+setWatchUI(options: { watchUI: string; }) => Promise<void>
 ```
 
-| Param    | Type                |
-| -------- | ------------------- |
-| **`ui`** | <code>string</code> |
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | <code>{ watchUI: string; }</code> |
 
 --------------------
 
@@ -56,12 +56,12 @@ setWatchUI(ui: string) => Promise<void>
 ### updateWatchUI(...)
 
 ```typescript
-updateWatchUI(newUI: string) => Promise<void>
+updateWatchUI(options: { watchUI: string; }) => Promise<void>
 ```
 
-| Param       | Type                |
-| ----------- | ------------------- |
-| **`newUI`** | <code>string</code> |
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | <code>{ watchUI: string; }</code> |
 
 --------------------
 
@@ -69,12 +69,12 @@ updateWatchUI(newUI: string) => Promise<void>
 ### updateWatchData(...)
 
 ```typescript
-updateWatchData(data: string) => Promise<void>
+updateWatchData(options: { data: string; }) => Promise<void>
 ```
 
-| Param      | Type                |
-| ---------- | ------------------- |
-| **`data`** | <code>string</code> |
+| Param         | Type                           |
+| ------------- | ------------------------------ |
+| **`options`** | <code>{ data: string; }</code> |
 
 --------------------
 

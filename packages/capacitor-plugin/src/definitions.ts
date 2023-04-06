@@ -12,9 +12,9 @@ export interface WatchPlugin {
         listenerFunc: (command: String) => void,
       ): Promise<PluginListenerHandle> & PluginListenerHandle;
 
-    setWatchUI(ui: string): Promise<void>;
+    setWatchUI(options: {watchUI: string}): Promise<void>;
 
-    updateWatchUI(newUI: string): Promise<void>;
+    updateWatchUI(options: {watchUI: string}): Promise<void>;
 
-    updateWatchData(data: string): Promise<void>;
+    updateWatchData(options: {data: string}): Promise<void>;
 }
