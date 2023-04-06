@@ -1,10 +1,10 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { CapWatchPlugin } from './definitions';
+import type { WatchPlugin } from './definitions';
 
-const CapWatch = registerPlugin<CapWatchPlugin>('CapWatchPlugin', {
-  web: () => import('./web').then(m => new m.CapWatchWeb()),
+const Watch = registerPlugin<WatchPlugin>('WatchPlugin', {
+  web: () => import('./web').then(m => new m.WatchWeb()),
 });
 
 export * from './definitions';
-export { CapWatch };
+export { Watch };

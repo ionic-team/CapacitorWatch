@@ -5,7 +5,7 @@ import type { PluginListenerHandle } from '@capacitor/core';
 // const DATA_KEY = "viewData";
 // const COMMAND_KEY = "jsCommand";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface CapWatchPlugin {
+export interface WatchPlugin {
 
     addListener(
         eventName: "runCommand",

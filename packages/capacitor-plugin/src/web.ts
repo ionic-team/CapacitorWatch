@@ -1,8 +1,8 @@
 import { WebPlugin } from '@capacitor/core';
 
-import type { CapWatchPlugin } from './definitions';
+import type { WatchPlugin } from './definitions';
 
-export class CapWatchWeb extends WebPlugin implements CapWatchPlugin {
+export class WatchWeb extends WebPlugin implements WatchPlugin {
     async setWatchUI(_newUI: string): Promise<void> {
         return Promise.reject("method not implemented on web");
     }

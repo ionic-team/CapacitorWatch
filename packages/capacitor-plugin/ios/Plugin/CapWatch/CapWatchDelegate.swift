@@ -11,7 +11,7 @@ import WatchConnectivity
 public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     var WATCH_UI = ""
     
-    static var shared = CapWatchSessionDelegate()
+    public static var shared = CapWatchSessionDelegate()
     
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         

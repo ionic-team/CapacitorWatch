@@ -15,6 +15,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   history: createWebHistory(process.env.BASE_URL),
   routes
 })

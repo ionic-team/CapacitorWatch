@@ -9,7 +9,7 @@
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
+          <ion-title size="large">CapacitorWatch</ion-title>
         </ion-toolbar>
       </ion-header>
 
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
-import { CapWatch } from '@ionic-enterprise/capWatch';
+import { Watch } from '@ionic-enterprise/capWatch';
 
 const watchUI = 
 `Text("Capacitor WATCH")
@@ -30,10 +30,19 @@ Text("Counter: $counter")
 Button("+=1", "js(counter++)")`;
 
 // in theory this will happen at some time well after the watch session has begun
-CapWatch.updateWatchUI(watchUI);
+// CapWatch.updateWatchUI(watchUI);
 
 async function testFoo() {
-  await CapWatch.updateWatchUI(watchUI);
+  console.log("trying to update watchui");
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  console.log(JSON.stringify(Object.keys(window.Capacitor.Plugins.Watch)));
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  console.log(JSON.stringify(Object.keys(window.Capacitor.Plugins.WatchPlugin)));
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  await window.Capacitor.Plugins.Watch.updateWatchUI(watchUI);
 }
 </script>
 
