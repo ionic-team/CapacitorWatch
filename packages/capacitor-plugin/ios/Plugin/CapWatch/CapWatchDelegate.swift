@@ -54,7 +54,7 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
         }
         
         if let command = userInfo[COMMAND_KEY] as? String {
-            print("process: \(command)")
+            print("PHONE process: \(command)")
             commandToJS(command)
         }
     }

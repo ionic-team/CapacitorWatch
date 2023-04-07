@@ -41,7 +41,7 @@ public class WatchPlugin: CAPPlugin {
     
     @objc func handleCommandFromWatch(_ notification: NSNotification) {
         if let command = notification.userInfo![COMMAND_KEY] as? String {
-            print("process: \(command)")
+            print("WATCH process: \(command)")
             notifyListeners("runCommand", data: ["command": command])
         }
     }

@@ -14,9 +14,9 @@
       </ion-header>
 
       <div id="container">
-      <ion-button @click="sendUI()">Send WatchUI</ion-button>
-      <ion-button @click="sendData()">Send Data</ion-button>
-      
+        <div>{{ stateData.counter }}</div>
+        <ion-button @click="sendUI()">Send WatchUI</ion-button>
+        <ion-button @click="sendData()">Increment</ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 import { Watch } from '@ionic-enterprise/capWatch';
+import { reactive, ref, watchEffect } from 'vue';
 
 const watchUI = 
 `Text("Capacitor WATCH")
@@ -32,10 +33,10 @@ Text("Counter: $counter")
 Button("+=1", "js(counter++)")`;
 
 // eslint-disable-next-line
-var stateData = {
-  counter: "1",
+var stateData = reactive({
+  counter: 0,
   var2: "2"
-};
+});
 
 // in theory this will happen at some time well after the watch session has begun
 // CapWatch.updateWatchUI(watchUI);
@@ -46,8 +47,19 @@ async function sendUI() {
 }
 
 async function sendData() {
-  console.log("trying to update watch data");
-  await Watch.updateWatchData({"data": stateData})
+  stateData.counter++;
+  console.log("stateData is " + JSON.stringify(stateData));
+  await Watch.updateWatchData({"data": convertValuesOfObjectToStringValues(stateData)});
+}
+
+function convertValuesOfObjectToStringValues(obj: Record<string, any>): Record<string, string> {
+  const convertedObj: Record<string, string> = {};
+
+  for (const [key, value] of Object.entries(obj)) {
+    convertedObj[key] = String(value);
+  }
+
+  return convertedObj;
 }
 </script>
 
