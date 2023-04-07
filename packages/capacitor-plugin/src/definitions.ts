@@ -9,7 +9,7 @@ export interface WatchPlugin {
 
     addListener(
         eventName: "runCommand",
-        listenerFunc: (command: String) => void,
+        listenerFunc: (data: {"command": string}) => void,
       ): Promise<PluginListenerHandle> & PluginListenerHandle;
 
     setWatchUI(options: {watchUI: string}): Promise<void>;

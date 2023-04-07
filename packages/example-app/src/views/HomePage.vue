@@ -16,7 +16,7 @@
       <div id="container">
         <div>{{ stateData.counter }}</div>
         <ion-button @click="sendUI()">Send WatchUI</ion-button>
-        <ion-button @click="sendData()">Increment</ion-button>
+        <ion-button @click="counterIncrement()">Increment</ion-button>
       </div>
     </ion-content>
   </ion-page>
@@ -26,11 +26,29 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 import { Watch } from '@ionic-enterprise/capWatch';
 import { reactive, ref, watchEffect } from 'vue';
+import { time } from 'console';
+
+// eslint-disable-next-line
+const watchMethods: { [M: string]: Function } = {
+  inc: counterIncrement
+}
+
+function runMethod(name: string) {
+  if (watchMethods[name]) {
+    return watchMethods[name]();
+  }
+
+  throw new Error(`Method '${name}' is not implemented.`);
+}
+
+Watch.addListener("runCommand", (data: {command: string}) => {  
+  return runMethod(data.command);
+})
 
 const watchUI = 
 `Text("Capacitor WATCH")
 Text("Counter: $counter")
-Button("+=1", "js(counter++)")`;
+Button("+=1", "inc")`;
 
 // eslint-disable-next-line
 var stateData = reactive({
@@ -46,7 +64,7 @@ async function sendUI() {
   await Watch.updateWatchUI({"watchUI": watchUI});
 }
 
-async function sendData() {
+async function counterIncrement() {
   stateData.counter++;
   console.log("stateData is " + JSON.stringify(stateData));
   await Watch.updateWatchData({"data": convertValuesOfObjectToStringValues(stateData)});
