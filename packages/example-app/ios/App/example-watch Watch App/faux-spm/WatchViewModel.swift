@@ -48,6 +48,8 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        // dcg - this method should be used when the phone sends data to watch when watch app is in bg
+        
         DispatchQueue.main.async {
             self.watchUI = applicationContext[UI_KEY] as? String ?? ""
             self.savedUI = self.watchUI

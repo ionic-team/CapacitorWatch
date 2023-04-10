@@ -109,4 +109,8 @@ function convertValuesOfObjectToStringValues(obj: Record<string, any>): Record<s
 #container a {
   text-decoration: none;
 }
+
+#container div {
+  font-size: 40px;
+}
 </style>
