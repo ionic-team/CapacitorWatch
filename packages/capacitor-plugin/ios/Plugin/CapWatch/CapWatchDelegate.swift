@@ -1,9 +1,8 @@
 //
-//  CapWatchDelegate.swift
-//  Plugin
+//  WatchSessionDelegate.swift
+//  
 //
-//  Created by Dan Giralté on 3/16/23.
-//  Copyright © 2023 Max Lynch. All rights reserved.
+//  Created by Dan Giralté on 2/24/23.
 //
 
 import WatchConnectivity
@@ -29,34 +28,16 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     }
     
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        let command = message[REQUESTUI_KEY] as? String ?? ""
-        
-        if command == REQUESTUI_VALUE {
-            sendUI()
-        }
+        handleWatchMessage(message)
     }
     
     public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String: Any]) {
-        let command = applicationContext[REQUESTUI_KEY] as? String ?? ""
-        
-        if command == REQUESTUI_VALUE {
-            sendUI()
-        }
+        handleWatchMessage(applicationContext)
     }
     
     public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
-        print("PHONE got didReceiveUserInfo: \(userInfo)")
-        
-        if let command = userInfo[REQUESTUI_KEY] as? String {
-            if command == REQUESTUI_VALUE {
-                sendUI()
-            }
-        }
-        
-        if let command = userInfo[COMMAND_KEY] as? String {
-            print("PHONE process: \(command)")
-            commandToJS(command)
-        }
+        // print("PHONE got didReceiveUserInfo: \(userInfo)")
+        handleWatchMessage(userInfo)
     }
         
     func updateViewData(_ data: [String: String]) {
@@ -75,5 +56,18 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
                                         userInfo: [COMMAND_KEY: command])
     }
     
+    func handleWatchMessage(_ userInfo: [String: Any]) {
+        if let command = userInfo[REQUESTUI_KEY] as? String {
+            if command == REQUESTUI_VALUE {
+                sendUI()
+            }
+        }
+        
+        if let command = userInfo[COMMAND_KEY] as? String {
+            print("PHONE process: \(command)")
+            commandToJS(command)
+        }
+    }
+
     #endif
 }
