@@ -39,21 +39,27 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        DispatchQueue.main.async {
-            self.watchUI = message[UI_KEY] as? String ?? ""
-            
-            self.savedUI = self.watchUI
-        }
+        handlePhoneMessage(message)
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        DispatchQueue.main.async {
-            self.watchUI = applicationContext[UI_KEY] as? String ?? ""
-            self.savedUI = self.watchUI
-        }
+        handlePhoneMessage(applicationContext)
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        handlePhoneMessage(userInfo)
+    }
+    
+    // required protocol stubs?
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func handlePhoneMessage(_ userInfo: [String Any] {
         DispatchQueue.main.async {
             if let newUI = userInfo[UI_KEY] as? String {
                 self.watchUI = newUI
@@ -65,15 +71,5 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
                 self.viewData = newViewData
             }
         }
-    }
-    
-    // required protocol stubs?
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
-    
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
+    })
 }
-

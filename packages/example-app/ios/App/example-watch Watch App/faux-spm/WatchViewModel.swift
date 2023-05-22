@@ -1,6 +1,6 @@
 //
 //  WatchViewModel.swift
-//
+//  
 //
 //  Created by Dan Giralté on 2/24/23.
 //
@@ -34,29 +34,32 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         // apple docs say this won't work on simulator
         
         if WatchViewModel.shared.watchUI.isEmpty {
-            print("WATCH empty UI - sending \(REQUESTUI)")
             let _ = session.transferUserInfo(REQUESTUI)
         }
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        DispatchQueue.main.async {
-            self.watchUI = message[UI_KEY] as? String ?? ""
-            
-            self.savedUI = self.watchUI
-        }
+        handlePhoneMessage(message)
     }
     
     func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        // dcg - this method should be used when the phone sends data to watch when watch app is in bg
-        
-        DispatchQueue.main.async {
-            self.watchUI = applicationContext[UI_KEY] as? String ?? ""
-            self.savedUI = self.watchUI
-        }
+        handlePhoneMessage(applicationContext)
     }
     
     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        handlePhoneMessage(userInfo)
+    }
+    
+    // required protocol stubs?
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+
+    func handlePhoneMessage(_ userInfo: [String Any] {
         DispatchQueue.main.async {
             if let newUI = userInfo[UI_KEY] as? String {
                 self.watchUI = newUI
@@ -68,7 +71,5 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
                 self.viewData = newViewData
             }
         }
-    }
-    
+    })
 }
-
