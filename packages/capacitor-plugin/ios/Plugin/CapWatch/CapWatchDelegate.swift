@@ -6,6 +6,7 @@
 //
 
 import WatchConnectivity
+import IonicEnterpriseBackgroundRunner
 
 public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     var WATCH_UI = ""
@@ -13,7 +14,7 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     public static var shared = CapWatchSessionDelegate()
     
     public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        
+        print("PHONE WatchDelagate activationDidCompleteWith")
     }
     
     #if os(iOS)
@@ -28,6 +29,15 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     }
     
     public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+        var args: [String: Any] = [:]
+        args["message"] = message
+        
+        do {
+            try BackgroundRunner.shared.dispatchEvent(event: "WatchConnectivity_didReceiveUserInfo", inputArgs: args)
+        } catch {
+            print(error)
+        }
+        
         handleWatchMessage(message)
     }
     
@@ -37,6 +47,15 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     
     public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         // print("PHONE got didReceiveUserInfo: \(userInfo)")
+        var args: [String: Any] = [:]
+        args["userInfo"] = userInfo
+        
+        do {
+            try BackgroundRunner.shared.dispatchEvent(event: "WatchConnectivity_didReceiveUserInfo", inputArgs: args)
+        } catch {
+            print(error)
+        }
+        
         handleWatchMessage(userInfo)
     }
         

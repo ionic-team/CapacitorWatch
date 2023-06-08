@@ -39,7 +39,7 @@ public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
         // print("PHONE got didReceiveUserInfo: \(userInfo)")
         handleWatchMessage(userInfo)
     }
-        
+    
     func updateViewData(_ data: [String: String]) {
         DispatchQueue.main.async {
             let _ = WCSession.default.transferUserInfo([DATA_KEY: data])
