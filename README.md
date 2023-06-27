@@ -1,1 +1,1 @@
-# enterprise-watch
+# @capacitor/watch

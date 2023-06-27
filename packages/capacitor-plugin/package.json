@@ -1,5 +1,5 @@
 {
-  "name": "@ionic-enterprise/capWatch",
+  "name": "@capacitor/watch",
   "version": "1.0.0-alpha.0",
   "description": "Provide Watch interfaces and communication",
   "main": "dist/plugin.cjs.js",
@@ -11,15 +11,15 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "IonicEnterpriseCapWatch.podspec"
+    "CapacitorWatch.podspec"
   ],
   "author": "Ionic Team",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/enterprise-watch.git"
+    "url": "git+https://github.com/ionic-team/capacitorwatch.git"
   },
   "bugs": {
-    "url": "https://github.com/ionic-team/enterprise-watch/issues"
+    "url": "https://github.com/ionic-team/capacitorwatch/issues"
   },
   "keywords": [
     "capacitor",

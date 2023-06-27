@@ -1,6 +1,6 @@
 import UIKit
 import WatchConnectivity
-import IonicEnterpriseCapWatch
+import CapacitorWatch
 import Capacitor
 
 @UIApplicationMain

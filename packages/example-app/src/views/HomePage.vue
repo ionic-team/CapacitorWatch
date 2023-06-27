@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
-import { Watch } from '@ionic-enterprise/capWatch';
+import { Watch } from '@capacitor/watch';
 import { reactive, ref, watchEffect } from 'vue';
 import { time } from 'console';
 
