@@ -46,20 +46,12 @@ public class WatchPlugin: CAPPlugin {
         }
     }
     
-    @objc func setWatchUI(_ call: CAPPluginCall) {
+    @objc func updateWatchUI(_ call: CAPPluginCall) {
         guard let newUI = call.getString("watchUI")  else {
             return
         }
         
         CapWatchSessionDelegate.shared.WATCH_UI = newUI
-        
-        call.resolve()
-    }
-    
-    @objc func updateWatchUI(_ call: CAPPluginCall) {
-        let newUI = call.getString("watchUI")
-        
-        CapWatchSessionDelegate.shared.WATCH_UI = newUI!
         CapWatchSessionDelegate.shared.sendUI()
         
         call.resolve()

@@ -16,7 +16,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     
     @AppStorage(SAVEDUI_KEY) var savedUI: String = ""
     
-    @Published var watchUI = ""
+    @Published var watchUI = "Text(\"Capacitor WATCH\")\nButton(\"Add One\", \"inc\")"
     @Published var viewData: [String: String]?
     
     init(session: WCSession = .default, viewData: [String: String]? = nil) {
@@ -51,15 +51,11 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     // required protocol stubs?
-    func sessionDidBecomeInactive(_ session: WCSession) {
-        
-    }
+    //func sessionDidBecomeInactive(_ session: WCSession) {}
     
-    func sessionDidDeactivate(_ session: WCSession) {
-        
-    }
+    //func sessionDidDeactivate(_ session: WCSession) {}
     
-    func handlePhoneMessage(_ userInfo: [String Any] {
+    func handlePhoneMessage(_ userInfo: [String: Any]) {
         DispatchQueue.main.async {
             if let newUI = userInfo[UI_KEY] as? String {
                 self.watchUI = newUI
@@ -71,5 +67,5 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
                 self.viewData = newViewData
             }
         }
-    })
+    }
 }
