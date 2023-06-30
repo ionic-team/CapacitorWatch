@@ -25,7 +25,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@babel/core": "~7.21.3",
+    "@babel/core": "~7.22.0",
     "@capacitor/cli": "4.8.1",
     "@types/jest": "^27.0.2",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
