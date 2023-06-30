@@ -28,26 +28,26 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@capacitor/cli':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/core':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/docgen':
         specifier: ^0.0.18
         version: 0.0.18
       '@capacitor/ios':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@ionic/eslint-config':
         specifier: ^0.3.0
         version: 0.3.0(eslint@7.32.0)(typescript@4.7.4)
       '@ionic/prettier-config':
         specifier: ^1.0.1
-        version: 1.0.1(prettier@2.3.2)
+        version: 1.0.1(prettier@2.8.0)
       '@ionic/swiftlint-config':
         specifier: ^1.1.2
         version: 1.1.2
@@ -55,8 +55,8 @@ importers:
         specifier: ^7.11.0
         version: 7.32.0
       prettier:
-        specifier: ~2.3.0
-        version: 2.3.2
+        specifier: ~2.8.0
+        version: 2.8.0
       prettier-plugin-java:
         specifier: ~1.0.2
         version: 1.0.2
@@ -1754,12 +1754,12 @@ packages:
       - typescript
     dev: true
 
-  /@ionic/prettier-config@1.0.1(prettier@2.3.2):
+  /@ionic/prettier-config@1.0.1(prettier@2.8.0):
     resolution: {integrity: sha512-/v8UOW7rxkw/hvrRe/QfjlQsdjkm3sfAHoE3uqffO5BoNGijQMARrT32JT9Ei0g6KySXPyxxW+7LzPHrQmfzCw==}
     peerDependencies:
       prettier: ^2.0.0
     dependencies:
-      prettier: 2.3.2
+      prettier: 2.8.0
     dev: true
 
   /@ionic/swiftlint-config@1.1.2:
@@ -3743,7 +3743,7 @@ packages:
       source-map: 0.6.1
       vue-template-es2015-compiler: 1.9.1
     optionalDependencies:
-      prettier: 2.3.2
+      prettier: 2.8.0
     transitivePeerDependencies:
       - arc-templates
       - atpl
@@ -10978,8 +10978,8 @@ packages:
     hasBin: true
     dev: true
 
-  /prettier@2.3.2:
-    resolution: {integrity: sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==}
+  /prettier@2.8.0:
+    resolution: {integrity: sha512-9Lmg8hTFZKG0Asr/kW9Bp8tJjRVluO8EJQVfY2T7FMw9T5jy4I/Uvx0Rca/XWf50QQ1/SS48+6IJWnrb+2yemA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
