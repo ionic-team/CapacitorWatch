@@ -28,19 +28,19 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@capacitor/cli':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/core':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/docgen':
-        specifier: ^0.0.18
-        version: 0.0.18
+        specifier: ^0.2.0
+        version: 0.2.0
       '@capacitor/ios':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@ionic/eslint-config':
         specifier: ^0.3.0
@@ -1517,13 +1517,13 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@capacitor/docgen@0.0.18:
-    resolution: {integrity: sha512-BVqzrbSi9u5IaKRLlG0H/ZW8M23FDJpH2018RTGVHRn2Yk3na9jOcItBc3r+rYiwgRgAHylNw9Lt7+lWmJBD3Q==}
+  /@capacitor/docgen@0.2.0:
+    resolution: {integrity: sha512-JoKuEx4Ep9LVnTY1I4zaoQPlxy+AWVMwwOSou/U9f/nXsL391aBRH7hC12lKNZGetiComnt369vQ+/r7n9iXfQ==}
     engines: {node: '>=14.5.0'}
     hasBin: true
     dependencies:
       '@types/node': 14.18.38
-      colorette: 1.4.0
+      colorette: 2.0.19
       github-slugger: 1.5.0
       minimist: 1.2.8
       typescript: 4.2.4
@@ -5092,10 +5092,6 @@ packages:
 
   /colord@2.9.3:
     resolution: {integrity: sha512-jeC1axXpnb0/2nn/Y1LPuLdgXBLH7aDcHu4KEKfqw3CUhX7ZpfBSlPKyqXE6btIgEzfWtrX3/tyBCaCvXvMkOw==}
-    dev: true
-
-  /colorette@1.4.0:
-    resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==}
     dev: true
 
   /colorette@2.0.19:
