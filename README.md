@@ -94,7 +94,7 @@ The finished file should look like this:
 
 Step 7
 
-Add the 'Backgroun Modes' capability to the watch app target, and enable 'Remote Notifications':
+Add the 'Background Modes' capability to the watch app target, and enable 'Remote Notifications':
 
 <img src="img/watch-remote-not.png" />
 
