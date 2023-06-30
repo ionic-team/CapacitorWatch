@@ -114,7 +114,7 @@ There can be some challenges in syncing the watch and phone apps. Sometimes you 
 
 You will use a long string to define the watch UI. A newline delimits components. Currently this plugin only supports a vertical scroll view of either Text or Button components.
 
-Once you've defined your UI you can send it to the watch using the `updateWatchUI` method:
+Once you've defined your UI you can send it to the watch using the `updateWatchUI()` method:
 
 ```typescript
 async uploadMyWatchUI() {
@@ -122,8 +122,8 @@ async uploadMyWatchUI() {
         `Text("Capacitor WATCH")
          Button("Add One", "inc")`;
 
-      await Watch.updateWatchUI({"watchUI": watchUI});
-    }
+    await Watch.updateWatchUI({"watchUI": watchUI});
+}
 ```
 
 Will produce this:
@@ -134,12 +134,46 @@ Will produce this:
 
 This article provides a great summary on the native methods and their implications: https://alexanderweiss.dev/blog/2023-01-18-three-ways-to-communicate-via-watchconnectivity
 
-
-On the phone side, you can implement these methods using the Capacitor Background Runner Plugin (link). Currently the watch plugin will mainly handle the `didReceiveUserInfo` method, and you can recieve envents from the watch using the following code in your runner.js:
+On the phone side, you can implement these methods using the Capacitor Background Runner Plugin (link). Currently the watch plugin will mainly handle the `didReceiveUserInfo` method, and you can recieve envents from the watch while your app is in the background using the following code in your runner.js:
 
 ```javascript
 addEventListener("WatchConnectivity_didReceiveUserInfo", (args) => {
-  console.log(JSON.stringify(args));
-});
+  console.log(args.message.jsCommand);
+})
 ```
+
+You can also implment the `runCommand` event listener for foreground procesing:
+
+```typescript
+Watch.addListener("runCommand", (data: {command: string}) => {
+  console.log("PHONE got command - " + data.command);
+})
+```
+
+The commands are the 2nd paramter in the `Button()` definition of the watch UI. This can be any string.
+
+## Updating watch data
+
+You can add variables to `Text()` elements by using a `$` variable and updating with the `updateWatchData` command:
+
+```
+Text("Show my $number")
+```
+
+This example will update `$number` when executed: 
+
+```typescript
+var stateData = {
+  number: 0
+}
+
+async function counterIncrement() {
+  stateData.counter++  
+  await Watch.updateWatchData({"data": convertValuesOfObjectToStringValues(stateData)})
+}
+```
+
+# Persistance on the Watch
+
+Capacitor Watch will persist the last UI you sent with `updateWatchUI()`. State from `updateWatchData()` is NOT preserved.
 
