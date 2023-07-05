@@ -28,20 +28,20 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^5.1.0
-        version: 5.1.0(@capacitor/core@5.1.0)
+        specifier: ^5.0.0
+        version: 5.1.0(@capacitor/core@5.1.1)
       '@capacitor/cli':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.0.0
+        version: 5.1.1
       '@capacitor/core':
-        specifier: ^5.1.0
-        version: 5.1.0
+        specifier: ^5.0.0
+        version: 5.1.1
       '@capacitor/docgen':
         specifier: ^0.0.18
         version: 0.0.18
       '@capacitor/ios':
-        specifier: ^5.1.0
-        version: 5.1.0(@capacitor/core@5.1.0)
+        specifier: ^5.0.0
+        version: 5.1.0(@capacitor/core@5.1.1)
       '@ionic/eslint-config':
         specifier: ^0.3.0
         version: 0.3.0(eslint@7.32.0)(typescript@4.7.4)
@@ -77,22 +77,22 @@ importers:
     dependencies:
       '@capacitor/app':
         specifier: 4.1.1
-        version: 4.1.1(@capacitor/core@4.8.1)
+        version: 4.1.1(@capacitor/core@5.1.1)
       '@capacitor/core':
-        specifier: 4.8.1
-        version: 4.8.1
+        specifier: 5.1.1
+        version: 5.1.1
       '@capacitor/haptics':
         specifier: 4.1.0
-        version: 4.1.0(@capacitor/core@4.8.1)
+        version: 4.1.0(@capacitor/core@5.1.1)
       '@capacitor/ios':
-        specifier: ^4.0.0
-        version: 4.7.1(@capacitor/core@4.8.1)
+        specifier: ^5.0.0
+        version: 5.1.0(@capacitor/core@5.1.1)
       '@capacitor/keyboard':
         specifier: 4.1.1
-        version: 4.1.1(@capacitor/core@4.8.1)
+        version: 4.1.1(@capacitor/core@5.1.1)
       '@capacitor/status-bar':
         specifier: 4.1.1
-        version: 4.1.1(@capacitor/core@4.8.1)
+        version: 4.1.1(@capacitor/core@5.1.1)
       '@capacitor/watch':
         specifier: 'workspace: *'
         version: link:../capacitor-plugin
@@ -119,8 +119,8 @@ importers:
         specifier: ~7.21.3
         version: 7.21.3
       '@capacitor/cli':
-        specifier: 4.8.1
-        version: 4.8.1
+        specifier: 5.1.1
+        version: 5.1.1
       '@types/jest':
         specifier: ^27.0.2
         version: 27.5.2
@@ -1437,50 +1437,24 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@capacitor/android@5.1.0(@capacitor/core@5.1.0):
+  /@capacitor/android@5.1.0(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-gtJWhu+vFnYo4o4XxBYqaP0mPOgwjJucjlhpWovbKEtb4AgsKyPLrLaVM4U6j1QizIR23carA2hddUSNm/LSTA==}
     peerDependencies:
       '@capacitor/core': ^5.1.0
     dependencies:
-      '@capacitor/core': 5.1.0
+      '@capacitor/core': 5.1.1
     dev: true
 
-  /@capacitor/app@4.1.1(@capacitor/core@4.8.1):
+  /@capacitor/app@4.1.1(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-SJcJA1rhFQyeH6eLfUEbdKkHzAwzahJNVPNXmU88fdmXpMgM2dJGzZj1vrm6e21aQq+Z4aBVLJ2RCdj92zD7wg==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.8.1
+      '@capacitor/core': 5.1.1
     dev: false
 
-  /@capacitor/cli@4.8.1:
-    resolution: {integrity: sha512-Ssxh+YaMuP+ZHJYaRJ78NCxS5L+u3X3XWK+NGhe+aluRZDigK5LJIiqjp+K3Xx1zQBG62gWWCEZoDvXJvafPIw==}
-    engines: {node: '>=12.4.0'}
-    hasBin: true
-    dependencies:
-      '@ionic/cli-framework-output': 2.2.5
-      '@ionic/utils-fs': 3.1.6
-      '@ionic/utils-subprocess': 2.1.11
-      '@ionic/utils-terminal': 2.3.3
-      commander: 9.5.0
-      debug: 4.3.4(supports-color@8.1.1)
-      env-paths: 2.2.1
-      kleur: 4.1.5
-      native-run: 1.7.2
-      open: 8.4.2
-      plist: 3.0.6
-      prompts: 2.4.2
-      rimraf: 3.0.2
-      semver: 7.3.8
-      tar: 6.1.13
-      tslib: 2.5.0
-      xml2js: 0.5.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@capacitor/cli@5.1.0:
-    resolution: {integrity: sha512-pAXCfLmiaG1F3TEcl7SR/EggIyk8SS5VMmHZPlxNOurilKf1gSIJUbwOs736cmOaqRmCKE8T/WtcBeKMdMdN1g==}
+  /@capacitor/cli@5.1.1:
+    resolution: {integrity: sha512-q9yg4P+UsmEpNNTza040gxHtN7MvbHCaow2hi/podQ37sPxzpycg179tyYDjss07N02Qe3M/ReO42TgjAy27DQ==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
@@ -1505,17 +1479,10 @@ packages:
       - supports-color
     dev: true
 
-  /@capacitor/core@4.8.1:
-    resolution: {integrity: sha512-GIUGw1P2Iyh4jb8ZAIWRPtR2zH6ARcpwN5pn/vmIJiTujQBMQmF62s5L3m4XMQSVKlbw8iCPi/YKjlUL+EjKhA==}
+  /@capacitor/core@5.1.1:
+    resolution: {integrity: sha512-17rZMGpZYQgBAmUS1uAS1GrRkPAQiUfpTfvd2wWS9z87GoTL/5vtpPAtI0/XLtr4eve2TsATY2r8BaW2NfEO6Q==}
     dependencies:
       tslib: 2.5.0
-    dev: false
-
-  /@capacitor/core@5.1.0:
-    resolution: {integrity: sha512-lQDcQ0WKwyhFdtOXxyB+szxlTscGZeOk1tgNVrTg4glnF4k92RrC3uD4LQ27ITFwjBmTNPvOS3vyLz6B3I3JeA==}
-    dependencies:
-      tslib: 2.5.0
-    dev: true
 
   /@capacitor/docgen@0.0.18:
     resolution: {integrity: sha512-BVqzrbSi9u5IaKRLlG0H/ZW8M23FDJpH2018RTGVHRn2Yk3na9jOcItBc3r+rYiwgRgAHylNw9Lt7+lWmJBD3Q==}
@@ -1529,44 +1496,35 @@ packages:
       typescript: 4.2.4
     dev: true
 
-  /@capacitor/haptics@4.1.0(@capacitor/core@4.8.1):
+  /@capacitor/haptics@4.1.0(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-gAIFy50e1VZPdokRFLkl8Y+yZYB3e4brd5yu9DRShbWbheruwU34TxtG5C1NANvq4mbXd3tMXzBi59Q5JFyTHA==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.8.1
+      '@capacitor/core': 5.1.1
     dev: false
 
-  /@capacitor/ios@4.7.1(@capacitor/core@4.8.1):
-    resolution: {integrity: sha512-8VPxVoqj8E8e4lwPphAZ6ZdOtfQNC+DfUNafjyF+Y/hWu7xMBaElDnCqfSIVKtLUoJud8Ke7yONgMTHnNE+C9A==}
-    peerDependencies:
-      '@capacitor/core': ^4.7.0
-    dependencies:
-      '@capacitor/core': 4.8.1
-    dev: false
-
-  /@capacitor/ios@5.1.0(@capacitor/core@5.1.0):
+  /@capacitor/ios@5.1.0(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-OMXYrIzfb6bSY3M6xkamGr3W+nRQ3rvfEVTlV1ruCNNBWnYn+eFNyM1SLbscMrKOrI6MoUN0IMv5oUNZzLnNxA==}
     peerDependencies:
       '@capacitor/core': ^5.1.0
     dependencies:
-      '@capacitor/core': 5.1.0
-    dev: true
+      '@capacitor/core': 5.1.1
 
-  /@capacitor/keyboard@4.1.1(@capacitor/core@4.8.1):
+  /@capacitor/keyboard@4.1.1(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-fdC7u2TeG4BqwC0LnPnhOdya31C4QKdhk/8pc5lxI9X5jyYAetMCN1kEkKa7KREw4DdzXotJt27B9BXxAza6og==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.8.1
+      '@capacitor/core': 5.1.1
     dev: false
 
-  /@capacitor/status-bar@4.1.1(@capacitor/core@4.8.1):
+  /@capacitor/status-bar@4.1.1(@capacitor/core@5.1.1):
     resolution: {integrity: sha512-3wosxMD1XuIFz88+c2GdVEHSJV6u7suOeKQjyWf3zf9eFr622Sg+udZqDbC0dtTWXw97BWyCjv3r1EYJw7XnIA==}
     peerDependencies:
       '@capacitor/core': ^4.0.0
     dependencies:
-      '@capacitor/core': 4.8.1
+      '@capacitor/core': 5.1.1
     dev: false
 
   /@colors/colors@1.5.0:
