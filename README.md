@@ -13,6 +13,10 @@
 
 ---
 
+_CapacitorLABS_ - This project is experimental. Support is not provided. Please open issues when needed.
+
+---
+
 The Capacitor Watch plugin allows you to define a UI for a watch in your web code and show it on a paired watch.
 
 This currently only supports iOS. This guide assumes you've already added iOS to your capcacitor project.
