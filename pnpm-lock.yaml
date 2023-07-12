@@ -28,19 +28,19 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@capacitor/cli':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/core':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/docgen':
         specifier: ^0.0.18
         version: 0.0.18
       '@capacitor/ios':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@ionic/eslint-config':
         specifier: ^0.3.0
@@ -76,8 +76,8 @@ importers:
   packages/example-app:
     dependencies:
       '@capacitor/app':
-        specifier: 4.1.1
-        version: 4.1.1(@capacitor/core@4.8.1)
+        specifier: 5.0.6
+        version: 5.0.6(@capacitor/core@4.8.1)
       '@capacitor/core':
         specifier: 4.8.1
         version: 4.8.1
@@ -1445,10 +1445,10 @@ packages:
       '@capacitor/core': 5.1.0
     dev: true
 
-  /@capacitor/app@4.1.1(@capacitor/core@4.8.1):
-    resolution: {integrity: sha512-SJcJA1rhFQyeH6eLfUEbdKkHzAwzahJNVPNXmU88fdmXpMgM2dJGzZj1vrm6e21aQq+Z4aBVLJ2RCdj92zD7wg==}
+  /@capacitor/app@5.0.6(@capacitor/core@4.8.1):
+    resolution: {integrity: sha512-6ZXVdnNmaYILasC/RjQw+yfTmq2ZO7Q3v5lFcDVfq3PFGnybyYQh+RstBrYri+376OmXOXxBD7E6UxBhrMzXGA==}
     peerDependencies:
-      '@capacitor/core': ^4.0.0
+      '@capacitor/core': ^5.0.0
     dependencies:
       '@capacitor/core': 4.8.1
     dev: false
