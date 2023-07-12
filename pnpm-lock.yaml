@@ -28,19 +28,19 @@ importers:
   packages/capacitor-plugin:
     devDependencies:
       '@capacitor/android':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@capacitor/cli':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/core':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0
       '@capacitor/docgen':
         specifier: ^0.0.18
         version: 0.0.18
       '@capacitor/ios':
-        specifier: ^5.1.0
+        specifier: ^5.0.0
         version: 5.1.0(@capacitor/core@5.1.0)
       '@ionic/eslint-config':
         specifier: ^0.3.0
@@ -82,8 +82,8 @@ importers:
         specifier: 4.8.1
         version: 4.8.1
       '@capacitor/haptics':
-        specifier: 4.1.0
-        version: 4.1.0(@capacitor/core@4.8.1)
+        specifier: 5.0.6
+        version: 5.0.6(@capacitor/core@4.8.1)
       '@capacitor/ios':
         specifier: ^4.0.0
         version: 4.7.1(@capacitor/core@4.8.1)
@@ -1529,10 +1529,10 @@ packages:
       typescript: 4.2.4
     dev: true
 
-  /@capacitor/haptics@4.1.0(@capacitor/core@4.8.1):
-    resolution: {integrity: sha512-gAIFy50e1VZPdokRFLkl8Y+yZYB3e4brd5yu9DRShbWbheruwU34TxtG5C1NANvq4mbXd3tMXzBi59Q5JFyTHA==}
+  /@capacitor/haptics@5.0.6(@capacitor/core@4.8.1):
+    resolution: {integrity: sha512-UrMcR7p2X10ql4VLlowUuH/VckTeu0lj+RQpekxox14uxDmu5AGIFDK/iDTi8W6QZkxTJRZK6sbCjgwYgNJ7Pw==}
     peerDependencies:
-      '@capacitor/core': ^4.0.0
+      '@capacitor/core': ^5.0.0
     dependencies:
       '@capacitor/core': 4.8.1
     dev: false
