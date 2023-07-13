@@ -59,7 +59,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.8.8",
-    "prettier-plugin-java": "~2.2.0",
+    "prettier-plugin-java": "~1.6.0",
     "rimraf": "^5.0.1",
     "rollup": "^2.78.1",
     "swiftlint": "^1.0.2",
