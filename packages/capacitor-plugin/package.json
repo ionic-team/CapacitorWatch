@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/watch",
-  "version": "1.0.0-alpha.0",
+  "version": "0.1.0",
   "description": "Provide Watch interfaces and communication",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -16,7 +16,7 @@
   "author": "Ionic Team",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/capacitorwatch.git"
+    "url": "git+https://github.com/ionic-team/CapacitorWatch.git"
   },
   "bugs": {
     "url": "https://github.com/ionic-team/capacitorwatch/issues"
