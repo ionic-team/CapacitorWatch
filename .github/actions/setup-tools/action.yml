@@ -42,4 +42,4 @@ runs:
     - name: Install dependencies
       if: inputs.skip-install-on-cache-hit == 'false' || (inputs.skip-install-on-cache-hit == 'true' && steps.cache-pnpm-store.cache-hit == 'false')
       shell: bash
-      run: pnpm install
+      run: pnpm install --no-frozen-lockfile
