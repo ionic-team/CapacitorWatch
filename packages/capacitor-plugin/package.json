@@ -11,7 +11,8 @@
     "android/build.gradle",
     "dist/",
     "ios/Plugin/",
-    "CapacitorWatch.podspec"
+    "CapacitorWatch.podspec",
+    "iOS-capWatch-watch"
   ],
   "author": "Ionic Team",
   "repository": {
