@@ -14,7 +14,6 @@ npx cap sync
 <docgen-index>
 
 * [`addListener('runCommand', ...)`](#addlistenerruncommand)
-* [`setWatchUI(...)`](#setwatchui)
 * [`updateWatchUI(...)`](#updatewatchui)
 * [`updateWatchData(...)`](#updatewatchdata)
 * [Interfaces](#interfaces)
@@ -27,8 +26,10 @@ npx cap sync
 ### addListener('runCommand', ...)
 
 ```typescript
-addListener(eventName: "runCommand", listenerFunc: (data: { "command": string; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
+addListener(eventName: 'runCommand', listenerFunc: (data: { command: string; }) => void) => Promise<PluginListenerHandle> & PluginListenerHandle
 ```
+
+Listen for a command from the watch
 
 | Param              | Type                                                 |
 | ------------------ | ---------------------------------------------------- |
@@ -40,24 +41,13 @@ addListener(eventName: "runCommand", listenerFunc: (data: { "command": string; }
 --------------------
 
 
-### setWatchUI(...)
-
-```typescript
-setWatchUI(options: { watchUI: string; }) => Promise<void>
-```
-
-| Param         | Type                              |
-| ------------- | --------------------------------- |
-| **`options`** | <code>{ watchUI: string; }</code> |
-
---------------------
-
-
 ### updateWatchUI(...)
 
 ```typescript
 updateWatchUI(options: { watchUI: string; }) => Promise<void>
 ```
+
+Replaces the current watch UI with watchUI
 
 | Param         | Type                              |
 | ------------- | --------------------------------- |
@@ -71,6 +61,8 @@ updateWatchUI(options: { watchUI: string; }) => Promise<void>
 ```typescript
 updateWatchData(options: { data: { [key: string]: string; }; }) => Promise<void>
 ```
+
+Updates the watch's state data
 
 | Param         | Type                                               |
 | ------------- | -------------------------------------------------- |

@@ -16,7 +16,7 @@
     "@capacitor/ios": "^5.1.1",
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
-    "@capacitor/watch": "workspace:1.0.0-alpha.0",
+    "@capacitor/watch": "workspace:*",
     "@ionic/vue": "^7.1.3",
     "@ionic/vue-router": "^7.1.3",
     "core-js": "^3.31.1",

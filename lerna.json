@@ -6,7 +6,7 @@
   "version": "1.0.0-alpha.0",
   "command": {
     "version": {
-      "allowBranch": ["main", "master", "feat/*", "fix/*", "chore/*", "feat!/*"],
+      "allowBranch": ["main", "feat/*", "fix/*", "chore/*", "feat!/*"],
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "Release %s",
