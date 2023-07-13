@@ -35,7 +35,7 @@ jobs:
       - name: Build
         run: pnpm run build-docs
 
-      - uses: aws-actions/configure-aws-credentials@v1
+      - uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: arn:aws:iam::319312831725:role/github-docs
           aws-region: us-east-1
