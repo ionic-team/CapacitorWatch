@@ -37,10 +37,10 @@ jobs:
           echo "releasetype=$RELEASE_TYPE" >> $GITHUB_ENV
       
       - name: 'Set GitHub Identity'
-          shell: bash
-          run: |
-            git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
-            git config user.email "users.noreply.github.com"
+        shell: bash
+        run: |
+          git config user.name "Github Workflow (on behalf of ${{ github.actor }})"
+          git config user.email "users.noreply.github.com"
       
       - name: "NPM Identity"
         run: |
