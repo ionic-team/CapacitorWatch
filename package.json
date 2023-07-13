@@ -1,6 +1,5 @@
 {
   "name": "root",
-  "private": true,
   "scripts": {
     "build": "nx run-many --target=build --parallel=5 && nx run-many --target=build-docs --parallel=5",
     "fmt": "nx run-many --target=fmt --parallel=5",
