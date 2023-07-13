@@ -105,7 +105,7 @@ importers:
         specifier: 5.0.6
         version: 5.0.6(@capacitor/core@5.1.1)
       '@capacitor/watch':
-        specifier: workspace:1.0.0-alpha.0
+        specifier: workspace:*
         version: link:../capacitor-plugin
       '@ionic/vue':
         specifier: ^7.1.3
