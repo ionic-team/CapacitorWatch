@@ -6,7 +6,7 @@
 //
 
 import WatchConnectivity
-import IonicEnterpriseBackgroundRunner
+import CapacitorBackgroundRunner
 
 public class CapWatchSessionDelegate : NSObject, WCSessionDelegate {
     var WATCH_UI = ""
