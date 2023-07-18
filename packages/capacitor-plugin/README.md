@@ -1,11 +1,11 @@
-# @ionic-enterprise/capWatch
+# @capacitor/watch
 
 Provide Watch connectivity for Capacitor
 
 ## Install
 
 ```bash
-npm install @ionic-enterprise/capWatch
+npm install @capacitor/watch
 npx cap sync
 ```
 

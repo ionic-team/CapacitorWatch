@@ -13,7 +13,7 @@
     "dist/",
     "ios/Plugin/",
     "CapacitorWatch.podspec",
-    "iOS-capWatch-watch"
+    "CapWatch-Watch-SPM"
   ],
   "author": "Ionic Team",
   "repository": {
