@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
   s.ios.deployment_target  = '13.0'
   s.dependency 'Capacitor'
-  s.dependency 'IonicEnterpriseBackgroundRunner'
+  s.dependency 'CapacitorBackgroundRunner'
   s.swift_version = '5.7'
 end
