@@ -69,13 +69,35 @@ This dialog can be a little confusing, the key thing is your 'Bundle Identifier'
 
 Step 5
 
-We're going to add the code that makes Capacitor Watch work in the watch application. 
+We're going to add the code that makes Capacitor Watch work in the watch application.
 
-If you are using Xcode 15 Beta 2 or beyond you then need to add the Capacitor Watch Swift Package from your node_modules:
+---
 
-`placeholder`
+If you are using <b>Xcode 15 Beta 4 or beyond</b> you then need to add the Capacitor Watch Swift Package from your node_modules:
 
-With Xcode 14 you will need to go here https://github.com/ionic-team/CapacitorWatch/tree/main/packages/iOS-capWatch-watch/Sources/iOS-capWatch-watch and copy all the files into your Watch project and make sure the target selected is your watch app. It should look like so:
+First go to the project package dependancies
+
+<img src="img/spm-project-dependancies.png" />
+
+Then choose 'Add Local'
+
+<img src="img/spm-add-local.png" />
+
+Then navigate into the `node_modules/@capacitor/watch/CapWatch-Watch-SPM` folder and click 'Add Package'
+
+<img src="img/spm-nav-to-package.png" />
+
+Then in the column on the right pick your watch app to be the target and click 'Add Package'
+
+<img src="img/spm-pick-target.png" />
+
+Once this is done your Package Dependancies should look like this:
+
+<img src="img/spm-finished.png" />
+
+---
+
+With <b>Xcode 14</b> you will need to go here https://github.com/ionic-team/CapacitorWatch/tree/main/packages/iOS-capWatch-watch/Sources/iOS-capWatch-watch and copy all the files into your Watch project and make sure the target selected is your watch app. It should look like so:
 
 <img src="img/watch-sources-added.png" />
 
