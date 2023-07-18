@@ -1,6 +1,6 @@
-# iOS-capWatch-watch
+# CapWatch-watch-SPM
 
-This is a prototype for the watch app:
+This is the Swift Package fo the watch half of the CapacitorWatch plugin. See the main readme for more details
 
 ```
 import SwiftUI
