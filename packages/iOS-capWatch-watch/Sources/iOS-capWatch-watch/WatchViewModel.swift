@@ -51,9 +51,9 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     // required protocol stubs?
-    //func sessionDidBecomeInactive(_ session: WCSession) {}
+    func sessionDidBecomeInactive(_ session: WCSession) {}
     
-    //func sessionDidDeactivate(_ session: WCSession) {}
+    func sessionDidDeactivate(_ session: WCSession) {}
     
     func handlePhoneMessage(_ userInfo: [String: Any]) {
         DispatchQueue.main.async {

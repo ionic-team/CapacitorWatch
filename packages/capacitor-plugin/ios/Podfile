@@ -5,6 +5,7 @@ def capacitor_pods
   use_frameworks!
   pod 'Capacitor'
   pod 'CapacitorCordova'
+  pod 'CapacitorBackgroundRunner'
 end
 
 target 'Plugin' do
