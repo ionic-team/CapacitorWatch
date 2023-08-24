@@ -36,10 +36,12 @@ struct CapWatchComponentView : View, Identifiable {
             CapWatchText(controlParams, viewModel)
                 .foregroundColor(.white)
         } else if controlType == "Button" {
-            Button(splitParams[0]) {
-                WCSession.default.transferUserInfo([COMMAND_KEY:splitParams[1]])
-            }
-                .foregroundColor(.white)
+            Button(
+                action: { WCSession.default.transferUserInfo([COMMAND_KEY:splitParams[1]]) },
+                label: {
+                    CapWatchText(String(splitParams[0]), viewModel)
+                }
+            ).foregroundColor(.white)
         }
     }
 }
