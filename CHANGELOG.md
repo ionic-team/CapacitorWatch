@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.9](https://github.com/ionic-team/CapacitorWatch/compare/0.1.8...0.1.9) (2023-11-02)
+
+**Note:** Version bump only for package root
+
+
+
+
+
 ## [0.1.8](https://github.com/ionic-team/CapacitorWatch/compare/0.1.7...0.1.8) (2023-08-24)
 
 **Note:** Version bump only for package root
