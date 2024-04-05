@@ -216,7 +216,7 @@ npx cap sync
 
 <docgen-index>
 
-* [`addListener('runCommand', ...)`](#addlistenerruncommand)
+* [`addListener('runCommand', ...)`](#addlistenerruncommand-)
 * [`updateWatchUI(...)`](#updatewatchui)
 * [`updateWatchData(...)`](#updatewatchdata)
 * [Interfaces](#interfaces)
