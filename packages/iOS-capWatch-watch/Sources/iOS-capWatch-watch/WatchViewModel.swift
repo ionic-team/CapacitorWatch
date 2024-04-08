@@ -9,10 +9,10 @@ import Foundation
 import WatchConnectivity
 import SwiftUI
 
-class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
+public class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
     var session: WCSession
     
-    static var shared = WatchViewModel()
+    public static var shared = WatchViewModel()
     
     @AppStorage(SAVEDUI_KEY) var savedUI: String = ""
     
@@ -30,7 +30,7 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    public func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         // apple docs say this won't work on simulator
         
         if WatchViewModel.shared.watchUI.isEmpty {
@@ -38,22 +38,22 @@ class WatchViewModel: NSObject, WCSessionDelegate, ObservableObject {
         }
     }
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
         handlePhoneMessage(message)
     }
     
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+    public func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
         handlePhoneMessage(applicationContext)
     }
     
-    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+    public func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
         handlePhoneMessage(userInfo)
     }
     
     // required protocol stubs?
-    func sessionDidBecomeInactive(_ session: WCSession) {}
+    //func sessionDidBecomeInactive(_ session: WCSession) {}
     
-    func sessionDidDeactivate(_ session: WCSession) {}
+    //func sessionDidDeactivate(_ session: WCSession) {}
     
     func handlePhoneMessage(_ userInfo: [String: Any]) {
         DispatchQueue.main.async {
