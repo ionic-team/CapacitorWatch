@@ -1,6 +1,6 @@
 {
   "name": "@capacitor/watch",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "license": "MIT",
   "description": "Provide Watch interfaces and communication",
   "main": "dist/plugin.cjs.js",
