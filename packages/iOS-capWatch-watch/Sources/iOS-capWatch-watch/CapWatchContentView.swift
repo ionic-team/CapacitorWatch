@@ -7,10 +7,12 @@
 
 import SwiftUI
 
-struct CapWatchContentView: View {
+public struct CapWatchContentView: View {
     @StateObject private var model = WatchViewModel.shared
     
-    var body: some View {
+    public init() { }
+    
+    public var body: some View {
         VStack {
             if model.watchUI == "" {
                 Button(action: {

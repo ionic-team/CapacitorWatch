@@ -55,7 +55,7 @@
     "@ionic/swiftlint-config": "^1.1.2",
     "@typescript-eslint/eslint-plugin": "^5.50.0",
     "eslint": "^8.44.0",
-    "eslint-config-standard-with-typescript": "^36.0.0",
+    "eslint-config-love": "^44.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
