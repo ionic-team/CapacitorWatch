@@ -73,7 +73,7 @@ We're going to add the code that makes Capacitor Watch work in the watch applica
 
 ---
 
-If you are using <b>Xcode 15 Beta 4 or beyond</b> you then need to add the Capacitor Watch Swift Package from your node_modules:
+If you are using <b>Xcode 15 or beyond</b> you then need to add the Capacitor Watch Swift Package from your node_modules:
 
 First go to the project package dependancies
 
@@ -103,20 +103,29 @@ With <b>Xcode 14</b> you will need to go here https://github.com/ionic-team/Capa
 
 Step 6
 
-Then open the watch app's 'Main' file which should be `watchappApp.swift`. Add the line `import WatchConnectivity` above the `@main` statement. Then replace the line that says `ContentView()` with this:
-
-```swift
-CapWatchContentView()
-    .onAppear {
-        assert(WCSession.isSupported(), "This sample requires Watch Connectivity support!")
-        WCSession.default.delegate = WatchViewModel.shared
-        WCSession.default.activate()
-    }
-```
+Then open the watch app's 'Main' file which should be `watchappApp.swift`. Add the lines `import WatchConnectivity` and `import iOS_capWatch_watch`  above the `@main` statement. Then replace the line that says `ContentView()` with this:
 
 The finished file should look like this:
 
-<img src="https://raw.githubusercontent.com/ionic-team/CapacitorWatch/main/img/watch-main-code.png" />
+```swift
+import SwiftUI
+import WatchConnectivity
+import iOS_capWatch_watch
+
+@main
+struct watchddgg_Watch_AppApp: App {
+    var body: some Scene {
+        WindowGroup {
+            CapWatchContentView()
+                .onAppear {
+                    assert(WCSession.isSupported(), "This sample requires Watch Connectivity support!")
+                    WCSession.default.delegate = WatchViewModel.shared
+                    WCSession.default.activate()
+                }
+        }
+    }
+}
+```
 
 Step 7
 
